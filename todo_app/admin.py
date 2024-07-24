@@ -5,7 +5,13 @@ from todo_app.models import Task, Tag
 
 @admin.register(Task)
 class TaskAdmin(admin.ModelAdmin):
-    list_display = ["content", "created_at", "deadline_time", "is_completed", "get_tags"]
+    list_display = [
+        "content",
+        "created_at",
+        "deadline_time",
+        "is_completed",
+        "get_tags"
+    ]
 
     def get_queryset(self, request):
         queryset = super().get_queryset(request)
