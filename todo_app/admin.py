@@ -12,7 +12,7 @@ class TaskAdmin(admin.ModelAdmin):
         return queryset.prefetch_related("tags")
 
     def get_tags(self, obj):
-        return ", ".join([task.name for task in obj.tags.all()])
+        return ", ".join([tag.name for tag in obj.tags.all()])
 
 
 @admin.register(Tag)
