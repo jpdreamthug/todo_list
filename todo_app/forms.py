@@ -9,7 +9,7 @@ class TaskForm(forms.ModelForm):
         widget=forms.CheckboxSelectMultiple
     )
     deadline_time = forms.DateTimeField(
-        widget=forms.DateTimeInput(attrs={'type': 'datetime-local'}),
+        widget=forms.DateTimeInput(attrs={"type": "datetime-local"}),
         required=False
     )
 
